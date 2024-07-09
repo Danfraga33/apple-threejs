@@ -10,6 +10,9 @@ export default defineConfig({
   }), sentryVitePlugin({
     org: "daniel-i33",
     project: "apple_website"
+  }), sentryVitePlugin({
+    org: "daniel-i33",
+    project: "apple_website"
   })],
 
   build: {
