@@ -9,7 +9,7 @@ const Highlights = () => {
       opacity: 1,
       y: 0,
     });
-    gsap.to(".link", { opacity: 1, duration: 1, y: 0, stagger: 0.25 });
+    gsap.to(".link", { opacity: 1, y: 0, duration: 1, stagger: 0.25 }, []);
   });
   return (
     <section
@@ -28,7 +28,7 @@ const Highlights = () => {
             </p>
             <p className="link">
               Watch the event
-              <img src={rightImg} alt="watch" className="mr-2" />
+              <img src={rightImg} alt="right" className="ml-2" />
             </p>
           </div>
         </div>
