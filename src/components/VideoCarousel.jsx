@@ -26,7 +26,7 @@ const VideoCarousel = () => {
 
   useGSAP(() => {
     gsap.to("#slider", {
-      transform: `translateX(${-100 * videoId})%)`,
+      transform: `translateX(${-100 * videoId}%)`,
       duration: 2,
       ease: "power2.inOut",
     });
@@ -97,7 +97,7 @@ const VideoCarousel = () => {
         gsap.ticker.remove(animUpdate);
       }
     }
-  }, [isPlaying, videoId, startPlay]);
+  }, [videoId, startPlay]);
 
   useEffect(() => {
     if (loadedData.length > 3) {
@@ -121,6 +121,19 @@ const VideoCarousel = () => {
       case "video-last":
         setVideo((prevVideo) => ({ ...prevVideo, isLastVideo: true }));
         break;
+      case "video-reset":
+        setVideo((prevVideo) => ({
+          ...prevVideo,
+          videoId: 0,
+          isLastVideo: false,
+        }));
+        break;
+      case "pause":
+        setVideo((prevVideo) => ({
+          ...prevVideo,
+          isPlaying: !prevVideo.isPlaying,
+        }));
+        break;
       case "play":
         setVideo((prevVideo) => ({
           ...prevVideo,
@@ -128,16 +141,6 @@ const VideoCarousel = () => {
         }));
         break;
 
-      case "video-reset":
-        setVideo((prevVideo) => ({ ...prevVideo, isLastVideo: false }));
-        break;
-
-      case "pause":
-        setVideo((prevVideo) => ({
-          ...prevVideo,
-          isPlaying: !prevVideo.isPlaying,
-        }));
-        break;
       default:
         return video;
     }
