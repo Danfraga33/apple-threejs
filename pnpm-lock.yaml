@@ -40,6 +40,9 @@ dependencies:
     version: 0.165.0
 
 devDependencies:
+  '@react-three/eslint-plugin':
+    specifier: ^0.1.1
+    version: 0.1.1
   '@types/react':
     specifier: ^18.3.3
     version: 18.3.3
@@ -285,7 +288,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
-    dev: false
 
   /@babel/template@7.24.7:
     resolution: {integrity: sha512-jYqfPrU9JTF0PmPy1tLYHW4Mp4KlgxJD9l2nP9fD6yT/ICi554DmrWBAEYpIelzjHf1msDP3PxJIRt/nFNfBig==}
@@ -759,6 +761,15 @@ packages:
       - '@types/three'
       - immer
     dev: false
+
+  /@react-three/eslint-plugin@0.1.1:
+    resolution: {integrity: sha512-n2tGHNhF3yzTar7lJkJPZeWFPH3C0jKb0Iws4zMelOQErqG3+xIfw3n8GQzL6olxuga/FP1tENl+UA+d6aa6Hg==}
+    dependencies:
+      '@babel/runtime': 7.24.7
+      eslint: 8.57.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@react-three/fiber@8.16.8(react-dom@18.3.1)(react@18.3.1)(three@0.165.0):
     resolution: {integrity: sha512-Lc8fjATtvQEfSd8d5iKdbpHtRm/aPMeFj7jQvp6TNHfpo8IQTW3wwcE1ZMrGGoUH+w2mnyS+0MK1NLPLnuzGkQ==}
@@ -2964,7 +2975,6 @@ packages:
 
   /regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-    dev: false
 
   /regexp.prototype.flags@1.5.2:
     resolution: {integrity: sha512-NcDiDkTLuPR+++OCKB0nWafEmhg/Da8aUPLPMQbK+bxKKCm1/S5he+AqYa4PlMCVBalb4/yxIRub6qkEx5yJbw==}
