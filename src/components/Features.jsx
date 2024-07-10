@@ -109,7 +109,6 @@ const Features = () => {
           </div>
         </div>
       </div>
-      Features
     </section>
   );
 };
